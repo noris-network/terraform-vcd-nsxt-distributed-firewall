@@ -103,3 +103,8 @@ module "distributed_firewall" {
   depends_on = [module.vcd_nsxt_app_port_profile, module.vcd_nsxt_ip_set]
 }
 ```
+
+## Changelog
+
+  * `v1.0.1`  - Implement lifecycle ignore_change rule on vdc_group_id to prevent destruction and recreation of the entire rule set upon creation of ip_set, app_port_profile or security groups
+  * `v1.0.0`  - Initial release
